@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "beer-temp-control"
+version = "0.1.0"
+description = ""
+authors = ["Ellis Percival <flyte@failcode.co.uk>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+behave = "^1.2.6"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
