@@ -43,11 +43,13 @@ class Controller:
 
     @current_temp.setter
     def current_temp(self, value):
-        self._current_temp = value
+        self._current_temp = float(value)
         self.update()
 
     @property
     def power_level(self):
+        if self._delta_t is None:
+            return None
         # This should be clamped already by the PID, but just to be sure
         return max(
             self._power_min,
@@ -56,6 +58,8 @@ class Controller:
 
     @property
     def direction(self):
+        if self._delta_t is None:
+            return None
         return Direction.HEATING if self._delta_t >= 0 else Direction.COOLING
 
     @property

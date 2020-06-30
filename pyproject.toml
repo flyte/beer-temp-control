@@ -7,6 +7,8 @@ authors = ["Ellis Percival <flyte@failcode.co.uk>"]
 [tool.poetry.dependencies]
 python = "^3.7"
 simple-pid = "^0.2.4"
+hbmqtt = "^0.9.6"
+jinja2 = "^2.11.2"
 
 [tool.poetry.dev-dependencies]
 behave = "^1.2.6"
